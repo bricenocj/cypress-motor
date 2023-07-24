@@ -4,7 +4,11 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "limpiar-reporte":"rimraf ./allure-report && rimraf ./allure-results",
+    "ejecutar-pruebas": "npx cypress run --headed --env allure=true",
+    "generar-reporte":"allure generate allure-results -o allure-report --clean",
+    "abrir-report": "allure open",
+    "test": "npm run limpiar-reporte && npm run ejecutar-pruebas && npm run generar-reporte && npm run abrir-report"
   },
   "repository": {
     "type": "git",
@@ -19,5 +23,9 @@
   "homepage": "https://github.com/bricenocj/cypress-motor#readme",
   "devDependencies": {
     "cypress": "^12.13.0"
+  },
+  "dependencies": {
+    "@shelex/cypress-allure-plugin": "^2.40.0",
+    "allure-commandline": "^2.23.0"
   }
 }
