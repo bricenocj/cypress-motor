@@ -1,4 +1,4 @@
-export class commonPageElements{
+export class CommonPageElements{
     static get topMenu(){
         return{
             get home(){
@@ -17,7 +17,7 @@ export class commonPageElements{
                 return cy.contains('a','Log in');
             },
             get signup(){
-                return cy.contains('a','Sign Up');
+                return cy.contains('a','Sign up');
             },
         };
     }
