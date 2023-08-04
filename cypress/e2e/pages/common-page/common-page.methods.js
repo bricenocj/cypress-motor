@@ -1,26 +1,32 @@
-import { commonPageData } from "./common-page.data";
-import { commonPageElements } from "./common-page.elements";
+import { CommonPageData, commonPageData } from "./common-page.data";
+import { CommonPageElements, commonPageElements } from "./common-page.elements";
 
-export class commonPageMethods{
-    static get navigateToDemoBlaze(){
-        cy.visit(commonPageData.url);
+export class CommonPageMethods{
+    static navigateToDemoBlaze(){
+        cy.clearCookies();
+        cy.visit(CommonPageData.url);
     }
     static ClickOnHomeOption(){
-        commonPageElements.topMenu.home.click();
+        CommonPageElements.topMenu.home.click();
     }
     static ClickOnContactOption(){
-        commonPageElements.topMenu.contact.click();
+        CommonPageElements.topMenu.contact.click();
     }
     static ClickOnAbotUsOption(){
-        commonPageElements.topMenu.aboutUs.click();
+        CommonPageElements.topMenu.aboutUs.click();
     }
     static clickOnCartOptions(){
-        commonPageElements.topMenu.cart.click();
+        CommonPageElements.topMenu.cart.click();
     }
     static ClickOnLoginOption(){
-        commonPageElements.topMenu.login.click();
+        CommonPageElements.topMenu.login.click();
     }
     static ClickOnSignUpOption(){
-        commonPageElements.topMenu.signup.click();
+        CommonPageElements.topMenu.signup.click();
+    }
+    static verifyAlert(expectedMessage){
+        cy.on('window:alert', (str) =>{
+            expect(str).to.equal(expectedMessage)
+        })
     }
 }
