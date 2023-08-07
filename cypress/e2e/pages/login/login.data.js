@@ -5,4 +5,11 @@ export class LoginData{
         password: "random01",
         };
     }
+
+    static get invalidCredentials(){
+        return{
+            username:"random01",
+            password: "random02",
+        };
+    }
 }

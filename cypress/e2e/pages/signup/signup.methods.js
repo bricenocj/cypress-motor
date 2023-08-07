@@ -1,3 +1,4 @@
+import { CommonPageElements } from "../common-page/common-page.elements";
 import { CommonPageMethods } from "../common-page/common-page.methods";
 import { SignupElements } from "./signup.elements";
 
