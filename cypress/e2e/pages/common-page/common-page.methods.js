@@ -7,7 +7,7 @@ export class CommonPageMethods{
         cy.visit(CommonPageData.url);
     }
     static ClickOnHomeOption(){
-        CommonPageElements.topMenu.home.click();
+        CommonPageElements.topMenu.home.click({force: true});
     }
     static ClickOnContactOption(){
         CommonPageElements.topMenu.contact.click();

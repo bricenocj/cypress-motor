@@ -10,11 +10,15 @@ export class HomeMethods{
    }
 
    static clickOnMonitorsOption(){
-    HomeElements.categoriesMenu.monitors.clickI();
+    HomeElements.categoriesMenu.monitors.click();
    }
 
    static clickOnProductLink(productName){
     HomeElements.product(productName).click();
+   }
+
+   static verifyProductDisplayed(productName){
+    HomeElements.product(productName).should('be.visible')
    }
 
 }

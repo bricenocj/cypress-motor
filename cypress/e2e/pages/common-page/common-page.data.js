@@ -6,7 +6,7 @@ export class CommonPageData{
         return{
             registro:'Registro ',
             autenticacion: 'Autenticación',
-            catalalogoYCompra:'Catálogo y Compras',
+            catalalogoYCompras:'Catálogo y Compras',
         }
     }
 }

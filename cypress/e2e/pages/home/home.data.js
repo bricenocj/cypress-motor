@@ -7,7 +7,9 @@ export class HomeData{
             samsungGalaxyS7:'Samsung galaxy s7',
             iphone632Gb:'Iphone 6 32gb',
             sonyXperiaZ5: 'Sony xperia z5',
-            htcOneM9: 'HTC One M9'  
+            htcOneM9: 'HTC One M9',
+            AppleMonitor: 'Apple monitor 24',
+            AsusFullHd: 'ASUS Full HD'
         }
 
 
