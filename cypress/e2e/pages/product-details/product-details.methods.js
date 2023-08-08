@@ -1,3 +1,4 @@
+import { CommonPageMethods } from "../common-page/common-page.methods";
 import { ProductDetailElements } from "./product-details.elements";
 
 export class ProductsDetailsMethods{
@@ -5,4 +6,11 @@ export class ProductsDetailsMethods{
         ProductDetailElements.buttons.addToCart.click();
     }
 
+    static verifyProductDetailPageDisplay(){
+        ProductDetailElements.buttons.addToCart.should('be.visible')
+    }
+
+    static verifiProductAddedMessage(){
+        CommonPageMethods.verifyAlert('Product added')
+    }
 }

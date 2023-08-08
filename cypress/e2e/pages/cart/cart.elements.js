@@ -10,7 +10,7 @@ export class CartElements{
     static get links(){
         return{
             delete(productName){
-            return cy.contains('td', productName).closest('tr').find('a');
+              return cy.contains("td", productName).closest("tr").find("a");
             },
 
         };
