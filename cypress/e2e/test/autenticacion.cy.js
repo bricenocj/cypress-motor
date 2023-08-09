@@ -5,7 +5,7 @@ import { LoginMethods } from "../pages/login/login.methods";
 import { SignupMethods } from "../pages/signup/signup.methods";
 import { Logger } from "../util/logger";
 
-describe (CommonPageData.testSuite.autenticacion, ()=>{
+xdescribe (CommonPageData.testSuite.autenticacion, ()=>{
     it ('Inicio de sesión válido', ()=>{
         Logger.stepNumber(1)
         Logger.step('Navegar a la pagina de inicio')

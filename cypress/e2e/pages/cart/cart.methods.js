@@ -11,4 +11,8 @@ export class CartMethods{
     static clickOnButtonPlaceOrder(){
         CartElements.buttoms.placeOrder.click({force: true});
     }
+    static verifyCartPageIsShown(){
+        cy.url().should('include', 'cart.html')
+
+    }
 }
