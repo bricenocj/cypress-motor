@@ -25,6 +25,9 @@ describe (CommonPageData.testSuite.autenticacion, ()=>{
         LoginMethods.clickOnLoginButton();
         Logger.verification('Verificar que se redirige al usuario a la página de inicio.');
         CommonPageMethods.verifySignedUser(LoginData.validCredentials.username);
+        
+        Logger.postCondition('Logout')
+        CommonPageMethods.logout();
     });
 
     it ('Inicio de sesión inválido', ()=>{
@@ -46,5 +49,8 @@ describe (CommonPageData.testSuite.autenticacion, ()=>{
         LoginMethods.clickOnLoginButton();
         Logger.verification('Verificar que se muestra un mensaje de error indicando que el inicio de sesión ha fallado.');
         LoginMethods.veirfyWrongPasswordMessage();
+
+        Logger.postCondition('Logout')
+        CommonPageMethods.logout();
     });
 })
