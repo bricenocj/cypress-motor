@@ -14,7 +14,7 @@ import { Logger } from "../util/logger";
 const product = 'Samsung galaxy s6'
 
 describe(CommonPageData.testSuite.catalalogoYCompras, () =>{
-    xit('Navegación por categorías', ()=>{
+    it('Navegación por categorías', ()=>{
         Logger.stepNumber(1)
         Logger.step('Iniciar sesión como usuario registrado.')
         Logger.subStep('Navegar a la pagina de inicio')
@@ -36,7 +36,7 @@ describe(CommonPageData.testSuite.catalalogoYCompras, () =>{
         HomeMethods.verifyProductDisplayed('Apple monitor 24')
         HomeMethods.verifyProductDisplayed('ASUS Full HD')
     })
-    xit('Agregar producto al carrito', ()=>{
+    it('Agregar producto al carrito', ()=>{
         Logger.stepNumber(1)
         Logger.step('Iniciar sesión como usuario registrado.')
         Logger.subStep('Navegar a la pagina de inicio')
