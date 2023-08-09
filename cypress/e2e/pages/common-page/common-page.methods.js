@@ -3,11 +3,14 @@ import { CommonPageElements, commonPageElements } from "./common-page.elements";
 
 export class CommonPageMethods{
     static navigateToDemoBlaze(){
-        cy.clearCookies();
+        cy.clearAllCookies();
+        cy.clearLocalStorage();
         cy.visit(CommonPageData.url);
     }
     static ClickOnHomeOption(){
-        CommonPageElements.topMenu.home.click({force: true});
+        CommonPageElements.topMenu.home.click();
+        //CommonPageElements.topMenu.home.click({force: true});
+
     }
     static ClickOnContactOption(){
         CommonPageElements.topMenu.contact.click();
