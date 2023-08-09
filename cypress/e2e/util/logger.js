@@ -20,7 +20,12 @@ export class Logger{
         cy.allure().step(text)
     }
     static subverification(descripcion){
-        const text = `Step - ${descripcion}`
+        const text = `subverification - ${descripcion}`
+        cy.log(text)
+        cy.allure().step(text)
+    }
+    static postCondition(descripcion){
+        const text = `POSTCONDITION - ${descripcion}`
         cy.log(text)
         cy.allure().step(text)
     }
