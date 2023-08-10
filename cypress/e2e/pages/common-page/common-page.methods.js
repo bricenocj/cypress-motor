@@ -8,8 +8,8 @@ export class CommonPageMethods{
         cy.visit(CommonPageData.url);
     }
     static ClickOnHomeOption(){
-        CommonPageElements.topMenu.home.click();
-        //CommonPageElements.topMenu.home.click({force: true});
+        //CommonPageElements.topMenu.home.click();
+        CommonPageElements.topMenu.home.click({force: true});
 
     }
     static ClickOnContactOption(){
@@ -54,7 +54,7 @@ export class CommonPageMethods{
 
     static logout(){
         cy.get('body').then($body=>{
-            if($body.find('#logout').length>0){
+            if($body.find('#logout2[style="display: block;"]').length>0){
                 CommonPageElements.topMenu.logout.click();
             }
         })

@@ -2,7 +2,6 @@ import { CommonPageData } from "../pages/common-page/common-page.data";
 import { CommonPageMethods } from "../pages/common-page/common-page.methods";
 import { LoginData } from "../pages/login/login.data";
 import { LoginMethods } from "../pages/login/login.methods";
-import { SignupMethods } from "../pages/signup/signup.methods";
 import { Logger } from "../util/logger";
 
 describe (CommonPageData.testSuite.autenticacion, ()=>{
@@ -50,7 +49,5 @@ describe (CommonPageData.testSuite.autenticacion, ()=>{
         Logger.verification('Verificar que se muestra un mensaje de error indicando que el inicio de sesión ha fallado.');
         LoginMethods.veirfyWrongPasswordMessage();
 
-        Logger.postCondition('Logout')
-        CommonPageMethods.logout();
     });
 })
