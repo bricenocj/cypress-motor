@@ -26,8 +26,7 @@ describe(CommonPageData.testSuite.registro, ()=>{
         Logger.stepNumber(4)
         Logger.step('Hacer clik en "Sign up" para registrar el usuario')
         SignupMethods.clickOnSignupButton();
-        //cy.wait(200000)
-        
+                
         Logger.verification('Verificar que se muestre el mensaje "Sign up successful."')
         SignupMethods.verifySignupSuccesfulMessageIsDisplayed()
     });
@@ -49,7 +48,7 @@ describe(CommonPageData.testSuite.registro, ()=>{
         Logger.stepNumber(4)
         Logger.step('Hacer clik en "Sign up" para registrar el usuario')
         SignupMethods.clickOnSignupButton();
-        //cy.wait(200000)
+        
         
         Logger.verification('Verificar que se muestra un mensaje de error indicando los campos invalidos"')
         SignupMethods.verifiThatThisUserAlreadyExistMessageIsDisplayed();
