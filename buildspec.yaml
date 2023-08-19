@@ -14,3 +14,4 @@ phases:
     commands: 
       - aws s3 sync allure-report s3://reporte-de-pruebas-motor/
       - aws s3 cp --recursive --acl public-read s3://reporte-de-pruebas-motor/ s3://reporte-de-pruebas-motor/ --metadata-directive REPLACE
+      
