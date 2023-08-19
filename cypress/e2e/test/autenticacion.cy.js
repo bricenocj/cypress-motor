@@ -5,7 +5,7 @@ import { LoginMethods } from "../pages/login/login.methods";
 import { Logger } from "../util/logger";
 
 describe (CommonPageData.testSuite.autenticacion, ()=>{
-    it ('Inicio de sesión válido', ()=>{
+    it('Inicio de sesión válido', ()=>{
         Logger.stepNumber(1)
         Logger.step('Navegar a la pagina de inicio')
         CommonPageMethods.navigateToDemoBlaze();
